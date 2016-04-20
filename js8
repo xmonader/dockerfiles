@@ -1,0 +1,10 @@
+FROM ubuntu:wily
+MAINTAINER xmonader@gmail.com
+RUN apt-get update
+RUN apt-get install -y python3.5 vim curl 
+
+RUN cd /tmp;rm -f install.sh;curl -k https://raw.githubusercontent.com/Jumpscale/jumpscale_core8/master/install/install.sh > install.sh;bash install.sh
+
+
+
+
